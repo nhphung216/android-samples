@@ -1,4 +1,4 @@
-package com.phung.android.samples
+package com.phung.android.samples.presentation.features.main.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidsamplesTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    com.phung.android.samples.presentation.features.note.view.Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -42,6 +42,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     AndroidsamplesTheme {
-        Greeting("Android")
+        com.phung.android.samples.presentation.features.note.view.Greeting("Android")
     }
 }
